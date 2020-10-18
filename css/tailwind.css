@@ -1,0 +1,162 @@
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e2e8f0; /* 2 */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Passion One", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  transition: all 0.25s ease;
+}
+a:visited {
+  color: inherit;
+}
+a:focus {
+  color: inherit;
+}
+a:hover, a:active {
+  @apply text-red-700;
+}
+
+.custom-logo {
+  max-width: 150px;
+}
+
+.nav-items,
+.quick-links,
+.services-links,
+.contact-info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-items .nav-link.active {
+  color: #e53e3e;
+}
+#responsive-nav {
+  transition: all 0.5s ease;
+  transform: translateX(-120%);
+}
+#responsive-nav.open {
+  transform: translateX(-1%);
+}
+
+.bottom-decor-line::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 5px;
+  background-color: red;
+}
+
+/* Meta Slider Styles Override */
+.page-template-front-page .metaslider .flexslider {
+  margin: 0;
+  overflow: hidden;
+}
+.page-template-front-page .metaslider .caption-wrap {
+  background: transparent;
+  opacity: 1;
+  height: 100%;
+}
+.page-template-front-page .metaslider .caption-wrap .caption {
+  padding: 0;
+}
+.page-template-front-page .metaslider .slides img {
+  height: 475px;
+}
+@media screen and (min-width: 768px) {
+  .page-template-front-page .metaslider .slides img {
+    height: 425px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .page-template-front-page .metaslider .slides img {
+    height: 450px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .page-template-front-page .metaslider .slides img {
+    height: 500px;
+  }
+}
+
+/* Contact Form 7 Styles Override */
+.wpcf7-form p {
+  margin-bottom: 1.25rem;
+}
+.wpcf7-form input:not([type="submit"]):not([type="reset"]),
+.wpcf7-form select,
+.wpcf7-form textarea {
+  @apply appearance-none border border-gray-400 rounded w-full py-2 px-3 mt-1 text-gray-800 leading-tight;
+}
+.wpcf7-form input:not([type="submit"]):not([type="reset"]):focus,
+.wpcf7-form select:focus,
+.wpcf7-form textarea:focus {
+  @apply outline-none border-yellow-600;
+}
+.wpcf7-form .wpcf7-not-valid-tip {
+  @apply mt-1;
+}
+.wpcf7-form input[type="button"], 
+.wpcf7-form input[type="reset"], 
+.wpcf7-form input[type="submit"] {
+  @apply py-2 px-6 bg-red-600 border-red-600 text-sm border-4 text-white rounded cursor-pointer transition duration-200;
+}
+.wpcf7-form input[type="button"]:focus, 
+.wpcf7-form input[type="reset"]:focus, 
+.wpcf7-form input[type="submit"]:focus {
+  @apply outline-none;
+}
+.wpcf7-form input[type="button"]:hover, 
+.wpcf7-form input[type="reset"]:hover, 
+.wpcf7-form input[type="submit"]:hover,
+.wpcf7-form input[type="button"]:active, 
+.wpcf7-form input[type="reset"]:active, 
+.wpcf7-form input[type="submit"]:active {
+  @apply bg-red-500 border-red-500;
+}
+.wpcf7 form.sent .wpcf7-response-output {
+  @apply px-4 py-2 border-2 border-yellow-200 bg-yellow-100 mx-0 my-0 text-green-600;
+}
+.wpcf7 form.invalid .wpcf7-response-output, 
+.wpcf7 form.unaccepted .wpcf7-response-output {
+  @apply px-4 py-2 border-2 border-yellow-200 bg-yellow-100 mx-0 my-0 text-red-600;
+}
+
+/* Single Post Styles Override */
+.single-post .cat-links {
+  @apply text-gray-600 text-sm font-semibold;
+}
+.single-post .cat-links > a {
+  @apply text-yellow-600;
+}
+.single-post .cat-links > a:hover, 
+.single-post .cat-links > a:active {
+  @apply text-yellow-700;
+}
+.single-post .post-navigation .nav-links a {
+  @apply text-gray-600 text-sm font-semibold;
+}
+.single-post .post-navigation .nav-links a:hover, 
+.single-post .post-navigation .nav-links a:active {
+  @apply text-red-700;
+}
+
