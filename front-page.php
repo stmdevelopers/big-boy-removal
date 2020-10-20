@@ -59,22 +59,29 @@ Template Name: Homepage
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap items-center">
           <div class="w-full lg:w-4/12 mx-auto px-2">
+          <?php
+          $image = get_field('brief_info_image'); 
+          if (!empty($image)):
+          ?>
             <img
               alt="..."
               class="max-w-full rounded-lg shadow-lg"
-              src="<?php echo get_template_directory_uri() . '/img/rubbish-truck.jpg' ?>"
+              src="<?php echo esc_url($image['url']); ?>"
               data-aos="zoom-in" 
               data-aos-duration="1000" 
               data-aos-once="true"
             />
+          <?php
+          endif;
+          ?>
           </div>
           <div class="w-full lg:w-6/12 mx-auto px-4">
             <div class="lg:pr-12">
               <h2 class="text-gray-900 text-3xl md:text-4xl lg:text-5xl font-bold mt-8 lg:my-0">
-                Fast, Friendly & Affordable Removal Service
+                <?php echo get_field("brief_info_heading_text"); ?>
               </h2>
               <p class="mt-6 text-lg leading-relaxed text-gray-600">
-                We work to ensure people’s comfort at their home or business, and to provide the best and the fastest services at fair prices. We stand for quality, safety and credibility, so you could be sure about our work. We offer all types of rubbish removals including various types of demolition service like hand, garage, sheds demolition, shops, office and commercial strip outs.
+                <?php echo get_field("brief_info_description"); ?>
               </p>
               <ul class="list-none p-0 m-0 mt-6">
                 <li class="py-2">
@@ -136,16 +143,20 @@ Template Name: Homepage
             <div
               class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
             >
-              <div class="p-6 flex-auto">
+              <div class="p-8 flex-auto">
+                <?php
+                $service1_id = get_field("service_item_1");
+                ?>
                 <div
                   class="text-white p-5 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-red-500"
                 >
-                  <i class="fas fa-truck-pickup fa-2x"></i>
+                  <i class="fas fa-<?php echo get_field("service_icon", $service1_id); ?> fa-2x"></i>
                 </div>
-                <h5 class="text-gray-900 text-xl font-semibold my-0 leading-relaxed">Construction Junk Removal</h5>
-                <p class="mt-3 mb-4 text-gray-600">
-                  Building sites are full of mess; a mountain of spare parts, wood and other materials. These leftover items are dangerous. Big Boy Removal has years of experience in handling these wastes.
+                <h5 class="text-gray-900 text-xl font-semibold my-0 leading-tight"><?php echo get_the_title($service1_id); ?></h5>
+                <p class="mt-3 mb-5 text-gray-600">
+                  <?php echo get_the_excerpt($service1_id); ?>
                 </p>
+                <a href="<?php echo get_the_permalink($service1_id); ?>" class="inline-block text-sm text-white bg-red-500 border-2 border-red-500 px-4 py-1 rounded-full shadow cursor-pointer focus:outline-none hover:bg-red-600 hover:text-white hover:border-red-600 visited:text-white transition duration-300">View Service</a>
               </div>
             </div>
           </div>
@@ -153,16 +164,20 @@ Template Name: Homepage
             <div
               class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
             >
-              <div class="p-6 flex-auto">
+              <div class="p-8 flex-auto">
+                <?php
+                $service2_id = get_field("service_item_2");
+                ?>
                 <div
                   class="text-white p-5 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-red-500"
                 >
-                  <i class="fas fa-hammer fa-2x"></i>
+                <i class="fas fa-<?php echo get_field("service_icon", $service2_id); ?> fa-2x"></i>
                 </div>
-                <h5 class="text-gray-900 text-xl font-semibold my-0 leading-relaxed">Demolition & Strip-Out</h5>
-                <p class="mt-3 mb-4 text-gray-600">
-                  From commercial and office demolition or strip outs, Big Boy Removal is always available and have fit team members with years of experience and great types of equipment to get the job done.
+                <h5 class="text-gray-900 text-xl font-semibold my-0 leading-tight"><?php echo get_the_title($service2_id); ?></h5>
+                <p class="mt-3 mb-5 text-gray-600">
+                  <?php echo get_the_excerpt($service2_id); ?>
                 </p>
+                <a href="<?php echo get_the_permalink($service2_id); ?>" class="inline-block text-sm text-white bg-red-500 border-2 border-red-500 px-4 py-1 rounded-full shadow cursor-pointer focus:outline-none hover:bg-red-600 hover:text-white hover:border-red-600 visited:text-white transition duration-300">View Service</a>
               </div>
             </div>
           </div>
@@ -170,16 +185,20 @@ Template Name: Homepage
             <div
               class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
             >
-              <div class="p-6 flex-auto">
+              <div class="p-8 flex-auto">
+                <?php
+                $service3_id = get_field("service_item_3");
+                ?>
                 <div
                   class="text-white p-5 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-red-500"
                 >
-                  <i class="fas fa-dumpster fa-2x"></i>
+                  <i class="fas fa-<?php echo get_field("service_icon", $service3_id); ?> fa-2x"></i>
                 </div>
-                <h5 class="text-gray-900 text-xl font-semibold my-0 leading-relaxed">Food & Garden Removal</h5>
-                <p class="mt-3 mb-4 text-gray-600">
-                  Whether it’s lots of leaves in the fall or weeds from the garden in spring, we know that getting rid of yard waste can be tough. Just give us a call and we at Big Boy Removal will get it out of your way.
+                <h5 class="text-gray-900 text-xl font-semibold my-0 leading-tight"><?php echo get_the_title($service3_id); ?></h5>
+                <p class="mt-3 mb-5 text-gray-600">
+                  <?php echo get_the_excerpt($service3_id); ?>
                 </p>
+                <a href="<?php echo get_the_permalink($service3_id); ?>" class="inline-block text-sm text-white bg-red-500 border-2 border-red-500 px-4 py-1 rounded-full shadow cursor-pointer focus:outline-none hover:bg-red-600 hover:text-white hover:border-red-600 visited:text-white transition duration-300">View Service</a>
               </div>
             </div>
           </div>
@@ -187,16 +206,20 @@ Template Name: Homepage
             <div
               class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
             >
-              <div class="p-6 flex-auto">
+              <div class="p-8 flex-auto">
+                <?php
+                $service4_id = get_field("service_item_4");
+                ?>
                 <div
                   class="text-white p-5 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-red-500"
                 >
-                  <i class="fas fa-tree fa-2x"></i>
+                  <i class="fas fa-<?php echo get_field("service_icon", $service4_id); ?> fa-2x"></i>
                 </div>
-                <h5 class="text-gray-900 text-xl font-semibold my-0 leading-relaxed">Tree Removal</h5>
-                <p class="mt-3 mb-4 text-gray-600">
-                  Building sites are full of mess; a mountain of spare parts, wood and other materials. These leftover items are dangerous. Big Boy Removal has years of experience in handling these wastes.
+                <h5 class="text-gray-900 text-xl font-semibold my-0 leading-tight"><?php echo get_the_title($service4_id); ?></h5>
+                <p class="mt-3 mb-5 text-gray-600">
+                  <?php echo get_the_excerpt($service4_id); ?>
                 </p>
+                <a href="<?php echo get_the_permalink($service4_id); ?>" class="inline-block text-sm text-white bg-red-500 border-2 border-red-500 px-4 py-1 rounded-full shadow cursor-pointer focus:outline-none hover:bg-red-600 hover:text-white hover:border-red-600 visited:text-white transition duration-300">View Service</a>
               </div>
             </div>
           </div>
@@ -204,16 +227,20 @@ Template Name: Homepage
             <div
               class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
             >
-              <div class="p-6 flex-auto">
+              <div class="p-8 flex-auto">
+                <?php
+                $service5_id = get_field("service_item_5");
+                ?>
                 <div
                   class="text-white p-5 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-red-500"
                 >
-                  <i class="fas fa-couch fa-2x"></i>
+                  <i class="fas fa-<?php echo get_field("service_icon", $service5_id); ?> fa-2x"></i>
                 </div>
-                <h5 class="text-gray-900 text-xl font-semibold my-0 leading-relaxed">Furniture Removal</h5>
-                <p class="mt-3 mb-4 text-gray-600">
-                  From commercial and office demolition or strip outs, Big Boy Removal is always available and have fit team members with years of experience and great types of equipment to get the job done.
+                <h5 class="text-gray-900 text-xl font-semibold my-0 leading-tight"><?php echo get_the_title($service5_id); ?></h5>
+                <p class="mt-3 mb-5 text-gray-600">
+                  <?php echo get_the_excerpt($service5_id); ?>
                 </p>
+                <a href="<?php echo get_the_permalink($service5_id); ?>" class="inline-block text-sm text-white bg-red-500 border-2 border-red-500 px-4 py-1 rounded-full shadow cursor-pointer focus:outline-none hover:bg-red-600 hover:text-white hover:border-red-600 visited:text-white transition duration-300">View Service</a>
               </div>
             </div>
           </div>
@@ -221,16 +248,20 @@ Template Name: Homepage
             <div
               class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
             >
-              <div class="p-6 flex-auto">
+              <div class="p-8 flex-auto">
+                <?php
+                $service6_id = get_field("service_item_6");
+                ?>
                 <div
                   class="text-white p-5 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-red-500"
                 >
-                  <i class="fas fa-hard-hat fa-2x"></i>
+                  <i class="fas fa-<?php echo get_field("service_icon", $service6_id); ?> fa-2x"></i>
                 </div>
-                <h5 class="text-gray-900 text-xl font-semibold my-0 leading-relaxed">Asbestos Removal</h5>
-                <p class="mt-3 mb-4 text-gray-600">
-                  Whether it’s lots of leaves in the fall or weeds from the garden in spring, we know that getting rid of yard waste can be tough. Just give us a call and we at Big Boy Removal will get it out of your way.
+                <h5 class="text-gray-900 text-xl font-semibold my-0 leading-tight"><?php echo get_the_title($service6_id); ?></h5>
+                <p class="mt-3 mb-5 text-gray-600">
+                  <?php echo get_the_excerpt($service6_id); ?>
                 </p>
+                <a href="<?php echo get_the_permalink($service6_id); ?>" class="inline-block text-sm text-white bg-red-500 border-2 border-red-500 px-4 py-1 rounded-full shadow cursor-pointer focus:outline-none hover:bg-red-600 hover:text-white hover:border-red-600 visited:text-white transition duration-300">View Service</a>
               </div>
             </div>
           </div>

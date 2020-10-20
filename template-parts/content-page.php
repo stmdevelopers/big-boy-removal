@@ -26,7 +26,7 @@
 
 	<?php // big_boy_removal_post_thumbnail(); ?>
 
-	<div class="entry-content container mx-auto px-4 md:px-8 py-2">
+	<div class="page-content-section entry-content container mx-auto px-4 md:px-8 py-2">
 		<?php
 		the_content();
 

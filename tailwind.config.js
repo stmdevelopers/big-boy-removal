@@ -15,7 +15,13 @@ module.exports = {
     ]
   },
   theme: {
-    extend: {},
+    extend: {
+      opacity: {
+        '60': '0.6',
+        '70': '0.7',
+        '90': '0.9',
+     }
+    },
   },
   variants: {
     textColor: ['responsive', 'hover', 'focus', 'visited'],

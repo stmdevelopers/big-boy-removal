@@ -107,6 +107,9 @@ a:hover, a:active {
 .wpcf7-form textarea {
   @apply appearance-none border border-gray-400 rounded w-full py-2 px-3 mt-1 text-gray-800 leading-tight;
 }
+.wpcf7-form textarea {
+  height: 150px;
+}
 .wpcf7-form input:not([type="submit"]):not([type="reset"]):focus,
 .wpcf7-form select:focus,
 .wpcf7-form textarea:focus {
@@ -160,3 +163,44 @@ a:hover, a:active {
   @apply text-red-700;
 }
 
+/* Services Page Style Fix */
+.services-page-content .service-item .bg-service-item {
+  transition: all 0.3s ease-in-out;
+}
+.services-page-content .service-item:hover .bg-service-item {
+  transform: scale(1.15);
+}
+@keyframes service-item-icon-anim {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.services-page-content .service-item:hover .icon-service-item {
+  animation: service-item-icon-anim 0.8s ease-in-out;
+}
+
+/* Page Content Section Style */
+.page-content-section h1 {
+  @apply text-4xl;
+}
+.page-content-section h2 {
+  @apply text-3xl;
+}
+.page-content-section h3 {
+  @apply text-2xl;
+}
+.page-content-section h4 {
+  @apply text-xl;
+}
+.page-content-section h5 {
+  @apply text-lg;
+}
+.page-content-section h6 {
+  @apply text-base;
+}
