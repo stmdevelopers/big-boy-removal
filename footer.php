@@ -18,14 +18,16 @@
 				<div class="w-full lg:w-5/12 px-4">
 					<h4 class="text-gray-900 text-3xl font-semibold my-0">Let's keep in touch!</h4>
 
-					<form class="w-full max-w-sm">
+					<?php echo do_shortcode('[newsletter_form form="1"]'); ?>
+
+					<!-- <form class="w-full max-w-sm">
 						<div class="flex items-center border-b border-red-600 py-2">
-							<input class="appearance-none bg-transparent w-full text-gray-700 mr-3 py-2 px-2 leading-tight focus:outline-none" style="border: none;" type="email" placeholder="Enter your email address" aria-label="email">
-							<button class="flex-shrink-0 bg-red-600 hover:bg-red-500 border-red-600 hover:border-red-500 text-sm border-4 text-white py-2 px-3 rounded cursor-pointer transition duration-200" type="button">
+							<input class="appearance-none bg-transparent w-full text-gray-700 mr-3 py-2 px-2 leading-tight focus:outline-none" style="border: none;" type="email" placeholder="Enter your email address" aria-label="email" required>
+							<button class="flex-shrink-0 bg-red-600 hover:bg-red-500 border-red-600 hover:border-red-500 text-sm border-4 text-white py-2 px-3 rounded cursor-pointer transition duration-200" type="submit">
 								Subscribe
 							</button>
 						</div>
-					</form>
+					</form> -->
 
 					<h5 class="text-lg mt-6 mb-2 text-gray-700">
 						Find us on any of these platforms, we respond 1-2 business days.
@@ -85,14 +87,14 @@
 							<ul class="contact-info">
 								<li>
 									<a
-										class="text-gray-700 hover:text-gray-900 font-semibold block pb-4 text-sm"
+										class="text-gray-700 hover:text-red-700 font-semibold block pb-4 text-sm"
 										href="tel:0451 386 808"
 										><i class="fas fa-phone-alt mr-2"></i> 0451 386 808
 									</a>
 								</li>
 								<li>
 									<a
-										class="text-gray-700 hover:text-gray-900 font-semibold block pb-4 text-sm"
+										class="text-gray-700 hover:text-red-700 font-semibold block pb-4 text-sm"
 										href="mailto:contact@bigboyremoval.com.au"
 										><i class="fas fa-envelope mr-2"></i> contact@bigboyremoval.com.au
 									</a>

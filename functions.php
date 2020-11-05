@@ -71,7 +71,7 @@ if ( ! function_exists( 'big_boy_removal_setup' ) ) :
 		// Add classes to each menu-item anchors in our Footer Menu Quick Links
 		function add_footer_menu_atts( $atts, $item, $args ) {
 			if ($args->menu_class == "quick-links") {
-				$atts['class'] = 'text-sm text-gray-700 hover:text-gray-900 font-semibold block pb-4';
+				$atts['class'] = 'text-sm text-gray-700 font-semibold block pb-4';
 			}
 			return $atts;
 		}
@@ -80,7 +80,7 @@ if ( ! function_exists( 'big_boy_removal_setup' ) ) :
 		// Add classes to each menu-item anchors in our Footer Services Menu
 		function add_services_menu_atts( $atts, $item, $args ) {
 			if ($args->menu_class == "services-links") {
-				$atts['class'] = 'text-sm text-gray-700 hover:text-gray-900 font-semibold block pb-4';
+				$atts['class'] = 'text-sm text-gray-700 font-semibold block pb-4';
 			}
 			return $atts;
 		}

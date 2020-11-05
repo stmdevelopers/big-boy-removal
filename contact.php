@@ -30,21 +30,21 @@ get_header();
               <i class="fas fa-phone-alt"></i>
             </div>
             <h4 class="m-0 pt-4 pb-1 text-center text-xl">Phone</h4>
-            <a href="tel:0451 386 808" class="cursor-pointer block m-0 text-center font-semibold text-yellow-100 hover:text-yellow-200">0451 386 808</a>
+            <a href="tel:0451 386 808" class="cursor-pointer block m-0 text-center font-semibold text-yellow-100 visited:text-yellow-100 hover:text-yellow-200">0451 386 808</a>
           </div>
           <div class="w-full md:w-1/2 lg:w-1/3 bg-red-600 p-5 rounded-lg md:mx-3 mb-6">
             <div class="inline-block mx-auto w-16 h-16 rounded-full text-2xl text-red-600 bg-yellow-100 flex justify-center items-center shadow-lg">
               <i class="fas fa-envelope"></i>
             </div>
             <h4 class="m-0 pt-4 pb-1 text-center text-xl">Email</h4>
-            <a href="mailto:info@bigboyremoval.com.au" class="cursor-pointer block m-0 text-center font-semibold text-yellow-100 hover:text-yellow-200">info@bigboyremoval.com.au</a>
+            <a href="mailto:info@bigboyremoval.com.au" class="cursor-pointer block m-0 text-center font-semibold text-yellow-100 visited:text-yellow-100 hover:text-yellow-200">info@bigboyremoval.com.au</a>
           </div>
           <div class="w-full md:w-1/2 lg:w-1/3 bg-red-600 p-5 rounded-lg md:mx-3 mb-6">
             <div class="inline-block mx-auto w-16 h-16 rounded-full text-2xl text-red-600 bg-yellow-100 flex justify-center items-center shadow-lg">
               <i class="fas fa-map-marker-alt"></i>
             </div>
             <h4 class="m-0 pt-4 pb-1 text-center text-xl">Address</h4>
-            <a href="#" class="cursor-pointer block m-0 text-center font-semibold text-yellow-100 hover:text-yellow-200">62-64 Station Street VIC 3078, Australia</a>
+            <p href="#" class="cursor-pointer block m-0 text-center font-semibold text-yellow-100 hover:text-yellow-200">62-64 Station Street VIC 3078, Australia</p>
           </div>
         </section>
 
@@ -76,5 +76,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

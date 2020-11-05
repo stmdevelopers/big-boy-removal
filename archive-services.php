@@ -37,11 +37,11 @@ get_header();
             <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="bg-service-item absolute top-0 left-0 w-full h-full rounded-lg">
             <div class="px-8 py-8 flex-auto text-center bg-black bg-opacity-60 rounded-lg z-10">
               <div class="icon-service-item text-white p-5 text-center inline-flex items-center justify-center w-20 h-20 mb-5 shadow-lg rounded-full bg-red-500">
-                <i class="fas fa-truck-pickup fa-2x"></i>
+                <i class="fas fa-<?php echo get_field("service_icon"); ?> fa-2x"></i>
               </div>
               <h5 class="text-white text-2xl font-semibold my-0 leading-tight"><?php the_title(); ?></h5>
               <p class="mt-2 mb-5 text-white">
-                <?php echo custom_excerpt(12);  ?>
+                <?php echo custom_excerpt(10);  ?>
               </p>
               <a href="<?php the_permalink(); ?>" class="inline-block text-sm text-white bg-red-600 border-2 border-red-600 px-4 py-1 rounded-full shadow cursor-pointer focus:outline-none hover:bg-red-500 hover:text-white hover:border-red-500 visited:text-white transition duration-300">View Service</a>
             </div>
@@ -67,5 +67,5 @@ get_header();
   <?php get_template_part( 'template-parts/content', 'bottom' ); ?>
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

@@ -66,6 +66,18 @@ a:hover, a:active {
   background-color: red;
 }
 
+/* Footer Style Fix */
+.quick-links a:visited,
+.services-links a:visited,
+.contact-info a:visited {
+  @apply text-gray-700;
+}
+.quick-links a:hover, .quick-links a:active,
+.services-links a:hover, .services-links a:active,
+.contact-info a:hover, .contact-info a:active {
+  @apply text-red-700;
+}
+
 /* Meta Slider Styles Override */
 .page-template-front-page .metaslider .flexslider {
   margin: 0;

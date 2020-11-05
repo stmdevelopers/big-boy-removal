@@ -881,6 +881,12 @@
   color: rgba(229, 62, 62, var(--text-opacity));
 }
 
+.hover\:text-red-700:hover {
+  --text-opacity: 1;
+  color: #c53030;
+  color: rgba(197, 48, 48, var(--text-opacity));
+}
+
 .hover\:text-yellow-200:hover {
   --text-opacity: 1;
   color: #fefcbf;
@@ -891,6 +897,12 @@
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.visited\:text-yellow-100:visited {
+  --text-opacity: 1;
+  color: #fffff0;
+  color: rgba(255, 255, 240, var(--text-opacity));
 }
 
 .uppercase {
@@ -1105,6 +1117,24 @@ a:hover, a:active {
   width: 5rem;
   height: 5px;
   background-color: red;
+}
+
+/* Footer Style Fix */
+
+.quick-links a:visited,
+.services-links a:visited,
+.contact-info a:visited {
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+}
+
+.quick-links a:hover, .quick-links a:active,
+.services-links a:hover, .services-links a:active,
+.contact-info a:hover, .contact-info a:active {
+  --text-opacity: 1;
+  color: #c53030;
+  color: rgba(197, 48, 48, var(--text-opacity));
 }
 
 /* Meta Slider Styles Override */

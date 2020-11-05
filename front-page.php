@@ -84,47 +84,51 @@ Template Name: Homepage
                 <?php echo get_field("brief_info_description"); ?>
               </p>
               <ul class="list-none p-0 m-0 mt-6">
-                <li class="py-2">
-                  <div class="flex items-center">
-                    <div>
-                      <span
-                        class="text-xs font-semibold inline-block py-1 px-2 w-8 h-8 uppercase rounded-full text-red-600 bg-yellow-200 mr-3"
-                        ><i class="fas fa-dumpster w-full h-full justify-center items-center" style="display: flex;"></i>
-                      </span>
+                <?php if (get_field("featured_services")["brief_info_service_1_title"] != ""): ?>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 w-8 h-8 uppercase rounded-full text-red-600 bg-yellow-200 mr-3"
+                          ><i class="fas fa-<?php echo get_field("featured_services")["brief_info_service_1_icon"]; ?> w-full h-full justify-center items-center" style="display: flex;"></i>
+                        </span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600 text-base m-0"><?php echo get_field("featured_services")["brief_info_service_1_title"]; ?></h4>
+                      </div>
                     </div>
-                    <div>
-                      <h4 class="text-gray-600 text-base m-0">
-                        Rubbish Removal
-                      </h4>
+                  </li>
+                <?php endif; ?>
+                <?php if (get_field("featured_services")["brief_info_service_2_title"] != ""): ?>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 w-8 h-8 uppercase rounded-full text-red-600 bg-yellow-200 mr-3"
+                          ><i class="fas fa-<?php echo get_field("featured_services")["brief_info_service_2_icon"]; ?> w-full h-full justify-center items-center" style="display: flex;"></i>
+                        </span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600 text-base m-0"><?php echo get_field("featured_services")["brief_info_service_2_title"]; ?></h4>
+                      </div>
                     </div>
-                  </div>
-                </li>
-                <li class="py-2">
-                  <div class="flex items-center">
-                    <div>
-                      <span
-                        class="text-xs font-semibold inline-block py-1 px-2 w-8 h-8 uppercase rounded-full text-red-600 bg-yellow-200 mr-3"
-                        ><i class="fas fa-hammer w-full h-full justify-center items-center" style="display: flex;"></i>
-                      </span>
+                  </li>
+                <?php endif; ?>
+                <?php if (get_field("featured_services")["brief_info_service_3_title"] != ""): ?>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 w-8 h-8 uppercase rounded-full text-red-600 bg-yellow-200 mr-3"
+                          ><i class="fas fa-<?php echo get_field("featured_services")["brief_info_service_3_icon"]; ?> w-full h-full justify-center items-center" style="display: flex;"></i>
+                        </span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600 text-base m-0"><?php echo get_field("featured_services")["brief_info_service_3_title"]; ?></h4>
+                      </div>
                     </div>
-                    <div>
-                      <h4 class="text-gray-600 text-base m-0">Demolition & Strip-Out</h4>
-                    </div>
-                  </div>
-                </li>
-                <li class="py-2">
-                  <div class="flex items-center">
-                    <div>
-                      <span
-                        class="text-xs font-semibold inline-block py-1 px-2 w-8 h-8 uppercase rounded-full text-red-600 bg-yellow-200 mr-3"
-                        ><i class="fas fa-tree w-full h-full justify-center items-center" style="display: flex;"></i>
-                      </span>
-                    </div>
-                    <div>
-                      <h4 class="text-gray-600 text-base m-0">Tree Removal</h4>
-                    </div>
-                  </div>
-                </li>
+                  </li>
+                <?php endif; ?>
               </ul>
             </div>
           </div>
